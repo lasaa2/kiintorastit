@@ -8,11 +8,20 @@
       }
       
       #menu {
-        position: absolute;
-        right: 60px;
-        bottom: 60px;
+          position: absolute;
+          right: 60px;
+          bottom: 60px;
       }
-
+      
+      #search-form {
+          position: absolute;
+          right: 100px;
+          bottom: 64px;
+      }
+      
+      .hide {
+          display: none;
+      }
       /* Optional: Makes the sample page fill the window. */
       
       html,
