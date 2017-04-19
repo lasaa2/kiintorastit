@@ -2,8 +2,9 @@ $(document).ready(function(){
 
 var upload = document.getElementById("myFile");
 
+function () {
 $.ajax({
-    url: upload,
+    url: "data.csv",
     async: false,
     success: function (csvd) {
         var items = $.csv.toObjects(csvd);
@@ -17,3 +18,5 @@ $.ajax({
 });
     
 };
+    
+});
