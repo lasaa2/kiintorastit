@@ -1,9 +1,11 @@
 $(document).ready(function(){
 
 $("button").click(function () {
-
+    
+    var myFile = document.getElementById("myFile");
+    
     $.ajax({
-    url: "data.csv",
+    url: myFile,
     async: false,
     success: function (csvd) {
         var items = $.csv.toObjects(csvd);
