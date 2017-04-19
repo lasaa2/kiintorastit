@@ -1,9 +1,11 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
 
 $("button").click(function () {
     
-    var myFile = document.getElementById("myFile");
+    var myFile = document.getElementById("myFile"); // Get input file
     
+    /* Convert csv to json and put main.js process */
+/*    
     $.ajax({
     url: myFile,
     async: false,
@@ -21,4 +23,4 @@ $("button").click(function () {
     
 });
     
-});
+});*/
