@@ -1,22 +1,22 @@
 $(document).ready(function(){
 
-var upload = document.getElementById("myFile");
+$("button").click(function () {
 
-function () {
-$.ajax({
+    $.ajax({
     url: "data.csv",
     async: false,
     success: function (csvd) {
         var items = $.csv.toObjects(csvd);
         var jsonobject = JSON.stringify(items);
-        alert(jsonobject);
+        console.log(jsonobject);
     },
     dataType: "text",
     complete: function () {
         // call a function on complete 
     }
-});
+
+    });
     
-};
+});
     
 });
