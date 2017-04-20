@@ -6,7 +6,6 @@ $(document).ready(function () {
 
     });
 
-
     $("#menu").click(function () {
 
         $("#search-form").toggleClass("hide");
@@ -17,10 +16,10 @@ $(document).ready(function () {
             var myFile = 0; // input filen muuttuja
             var jsonobject = 0; // json datan muuttuja
     */
-    
-    
+
+
     /* Admin valikossa olevat tiedoston lataus painikkeet */
-    
+
     $("#upload").click(function () {
 
         var myFile = document.getElementById("myFile"); // Get input file
