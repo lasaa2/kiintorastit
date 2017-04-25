@@ -4,10 +4,14 @@ var centerLatLng = {
     lat: 60.180955,
     lng: 24.927982
 };
-var zoomTaso = 12;
+var zoomTaso = 8;
 
 var jsonUrl = "../testi.geojson"; // määritetään json lähde
 //var jsonUrl = "http://users.metropolia.fi/~hannutam/hsl-api/HSLn_myyntipisteet.geojson";
+
+var myFile = "../testi.csv" //document.getElementById("myFile"); // Get input file
+
+var data = "../testi2.json";
 
 function initMap() {
 
@@ -24,19 +28,19 @@ function initMap() {
 
     map = new google.maps.Map($("#map")[0], mapProperties);
 
-    
     /* Funktio joka tulostaa json objektit kartalle. For-looppi. */
 
-    $.getJSON("../testi.geojson", function (json) {
-        for (var i = 0; i < jsonUrl.length; i++) {
+    $.getJSON(data, function (json) {
+        for (var i = 0; i < data.length; i++) {
 
-        //    console.log(json.features[2].properties.NIMI + "," + json.features[2].properties.LAT + "," + json.features[2].properties.LON);
+            console.log(json[i].KARTTA + "," + json[i].LAT + "," + json[i].LON);
 
             // Luodaan muuttuja jossa on markkereitten tiedot
             var markerProperties = {
-                position: new google.maps.LatLng(json.features[i].properties.LAT, json.features[i].properties.LON),
+                position: new google.maps.LatLng(json[i].LAT, json[i].LON),
                 map: map,
-                infoString: "Tämä on HSL " + json.features[i].properties.NIMI
+                infoString: 
+                "Kiintorastikartta: " + json[i].KARTTA + "<br>Seura: " +  json[i].SEURA + '<br>Linkki: ' + json[i].WEB + "<br>Mistä kartta? " + json[i].LISA
             };
 
             var marker = new google.maps.Marker(markerProperties);
@@ -50,7 +54,9 @@ function initMap() {
             });
         };
     });
+
 };
+
 
 
 /* Kaupunkihaku toiminto googlen API kautta */
@@ -111,3 +117,22 @@ function initMap() {
   }
 ]
 */
+
+
+/* Pelkkä csv to json */
+/*
+    $.ajax({
+        url: myFile,
+        async: false,
+        success: function (csvd) {
+            var items = $.csv.toObjects(csvd);
+            jsonobject = JSON.stringify(items);
+        },
+        dataType: "text",
+        complete: function () {
+            // call a function on complete
+            
+        }
+    });
+    
+    */
