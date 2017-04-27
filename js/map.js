@@ -16,7 +16,6 @@ var data = "../testi2.json";
 function initMap() {
 
     var mapCanvas = document.getElementById("map"); //$("#map")[0];
-    // var centerLatLng = new google.maps.LatLng(64.4740, 25.2134);
 
     var mapProperties = {
         center: new google.maps.LatLng(centerLatLng),
@@ -39,8 +38,7 @@ function initMap() {
             var markerProperties = {
                 position: new google.maps.LatLng(json[i].LAT, json[i].LON),
                 map: map,
-                infoString: 
-                "Kiintorastikartta: " + json[i].KARTTA + "<br>Seura: " +  json[i].SEURA + '<br>Linkki: ' + json[i].WEB + "<br>Mistä kartta? " + json[i].LISA
+                infoString: 'Kiintorastikartta: ' + json[i].KARTTA + '<br>Seura: ' + json[i].SEURA + '<br>Mistä kartta? ' + json[i].LISA + '<br><a href="' + json[i].WEB + '" target=_blank">Linkki karttaan</a>'
             };
 
             var marker = new google.maps.Marker(markerProperties);
@@ -57,42 +55,6 @@ function initMap() {
 
 };
 
-
-
-/* Kaupunkihaku toiminto googlen API kautta */
-/*
-    infowindow = new google.maps.InfoWindow();
-    var service = new google.maps.places.PlacesService(map);
-    service.nearbySearch({
-        location: centerLatLng,
-        radius: 500,
-        type: ['store']
-    }, callback);
-
-    function callback(results, status) {
-        if (status === google.maps.places.PlacesServiceStatus.OK) {
-            for (var i = 0; i < results.length; i++) {
-                createMarker(results[i]);
-            }
-        }
-    }
-
-    function createMarker(place) {
-        var placeLoc = place.geometry.location;
-        var marker = new google.maps.Marker({
-            map: map,
-            position: place.geometry.location
-        });
-
-        google.maps.event.addListener(marker, 'click', function () {
-            infowindow.setContent(place.name);
-            infowindow.open(map, this);
-        });
-    }
-
-};
-
-*/
 
 /* Pohjakartan tyylit */
 

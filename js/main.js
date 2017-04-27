@@ -13,11 +13,7 @@ $(document).ready(function () {
         $("#searchBox").toggleClass("hide");
 
     });
-
-
-
-
-
+    
 });
 
 
