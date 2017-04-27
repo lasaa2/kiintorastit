@@ -39,6 +39,15 @@
           padding: 15px;
       }
       
+      #places {
+          position: absolute;
+          
+          right: 38px;
+          top: 288px;
+          z-index: 99;
+          background-color: rgba(222, 228, 233, 0.8);
+      }
+      
       #searchBox {
           position: fixed;
           right: 82px;
