@@ -1,6 +1,6 @@
 # Kiintorastit kartalla palvelu
 
-Ominaisuuksia tulossa
+Ominaisuuksia
 
 - Kiintorasti kohteet kartalla
 - Tietoja kohteista

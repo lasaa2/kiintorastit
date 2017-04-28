@@ -36,12 +36,11 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/papaparse.js"></script>
 
     <!-- Omat JS filut -->
-    <script type="text/javascript" src="js/csv2geojson.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/map.js"></script>
-    <script type="text/javascript" src="js/points.js"></script>
 
 </head>
 
@@ -55,7 +54,7 @@
 
         <div class="hide" id="admin">
             <p>Lataa tästä aineisto csv muodossa!</p>
-            <input type="file" id="myFile">
+            <textarea id="myFile" rows="6" cols="30"></textarea>
             <button class="btn btn-default" id="upload">Lataa</button>
         </div>
         <label id="zin" for="searchBox">Tags: </label>
