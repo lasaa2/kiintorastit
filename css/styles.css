@@ -41,7 +41,6 @@
       
       #places {
           position: absolute;
-          
           right: 38px;
           top: 288px;
           z-index: 99;
@@ -69,4 +68,14 @@
       
       .hide {
           display: none;
+      }
+      
+      .markerikkuna {}
+      
+      #copyright {
+          position: fixed;
+          bottom: 25px;
+          left: 5px;
+          font-size: 10px;
+          z-index: 100;
       }
