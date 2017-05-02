@@ -1,3 +1,7 @@
+// Versio 0.1
+// Copyright Lassi ja Matias
+
+
 $(document).ready(function () {
 
     console.log("ready");

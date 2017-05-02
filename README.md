@@ -1,6 +1,8 @@
 # Kiintorastit kartalla palvelu
+Versio 0.1
 
-Ominaisuuksia
+## Ominaisuuksia
 
-- Suomen kiintorastit kartalla
+- Suomen kiintorastipaikat kartalla
 - Tietoja kohteista
+- Lisäinfo linkit
