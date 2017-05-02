@@ -2,5 +2,5 @@
 
 Ominaisuuksia
 
-- Kiintorasti kohteet kartalla
+- Suomen kiintorastit kartalla
 - Tietoja kohteista

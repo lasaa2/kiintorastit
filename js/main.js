@@ -29,8 +29,8 @@ $(document).ready(function () {
     var points = "aineisto.json"; // Muuttuja jossa on päivitetty kiintorastiaineisto
     
     $.getJSON(points, function (json) {
-        console.log(points.length);
-        for (var i = 0; i < points.length; i++) {
+        console.log(json.length);
+        for (var i = 0; i < json.length; i++) {
 
             //console.log(json[i].KARTTA + "," + json[i].LAT + "," + json[i].LON);
 
@@ -46,7 +46,7 @@ $(document).ready(function () {
             var marker = new google.maps.Marker(markerProperties);
             var infowindow = new google.maps.InfoWindow({});
 
-            // Tehdään click funktio joka tulostaa infoikkunan klikattaessa markkeria
+            // Tehdään jokaiseen markkeriin click-funktio joka tulostaa infoikkunan klikattaessa markkeria
             marker.addListener('click', function () {
                 infowindow.setContent(this.infoString);
                 infowindow.open(map, this);
