@@ -1,8 +1,8 @@
 var map;
 var infowindow;
 var centerLatLng = {
-    lat: 63.344420,
-    lng: 26.464051
+    lat: 64.250533,  
+    lng: 26.476404
 };
 var zoomTaso = 5; // Kartan zoomitaso
 var markerImage = 'img/rastilippu.png'; // Marker image
