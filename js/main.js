@@ -33,7 +33,6 @@ $(document).ready(function () {
     var points = "aineisto.json"; // Muuttuja jossa on päivitetty kiintorastiaineisto
     
     $.getJSON(points, function (json) {
-        console.log(json.length);
         for (var i = 0; i < json.length; i++) {
 
             //console.log(json[i].KARTTA + "," + json[i].LAT + "," + json[i].LON);
