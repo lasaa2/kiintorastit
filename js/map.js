@@ -47,10 +47,11 @@ function initMap() {
 
     var card = document.getElementById('pac-card');
     var input = document.getElementById('searchBox');
-    var countries = document.getElementById('country-selector');
+   // var countries = document.getElementById('country-selector');
 
-    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
-
+    // map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
+    map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(input);
+    
     var autocomplete = new google.maps.places.Autocomplete(input);
 
     // Set initial restrict to the greater list of countries.
