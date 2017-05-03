@@ -39,9 +39,9 @@
     <script type="text/javascript" src="js/papaparse.js"></script>
 
     <!-- Omat JS filut -->
-    <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/map.js"></script>
-
+    <script type="text/javascript" src="js/main.js"></script>
+    
 </head>
 
 <body>
@@ -50,17 +50,16 @@
     <div class="elementit">
         <h1 id="otsikko"></h1>
 
-        <button class="hide btn btn-default" id="adminbutton">Admin valinnat</button>
+        <button class="btn btn-default" id="adminbutton">Ehdota lisäystä!</button>
 
         <div class="hide" id="admin">
             <p>Lataa tästä aineisto csv muodossa!</p>
             <textarea id="myFile" rows="6" cols="30"></textarea>
             <button class="btn btn-default" id="upload">Lataa</button>
         </div>
-        <label id="zin" for="searchBox">Tags: </label>
-        <input class="hide controls" id="pac-input" type="text" size="35" placeholder="Kirjoita kaupunki...">
+        <input class="hide controls" id="searchBox" type="text" size="35" placeholder="Kirjoita kaupunki...">
 
-        <button class="hide btn btn-default" id="menu">
+        <button class="btn btn-default" id="menu">
             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
         </button>
         <div id="places"></div>
