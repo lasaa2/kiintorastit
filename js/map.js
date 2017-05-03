@@ -47,11 +47,11 @@ function initMap() {
 
     var card = document.getElementById('pac-card');
     var input = document.getElementById('searchBox');
-   // var countries = document.getElementById('country-selector');
+    // var countries = document.getElementById('country-selector');
 
     // map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
     map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(input);
-    
+
     var autocomplete = new google.maps.places.Autocomplete(input);
 
     // Set initial restrict to the greater list of countries.
@@ -96,29 +96,5 @@ function initMap() {
                 (place.address_components[2] && place.address_components[2].short_name || '')
             ].join(' ');
         }
-        /*
-                infowindowContent.children['place-icon'].src = place.icon;
-                infowindowContent.children['place-name'].textContent = place.name;
-                infowindowContent.children['place-address'].textContent = address;
-                infowindow.open(map, marker);
-        */
     });
-
-    /*
-        // Sets a listener on a given radio button. The radio buttons specify
-        // the countries used to restrict the autocomplete search.
-        function setupClickListener(id, countries) {
-            var radioButton = document.getElementById(id);
-            radioButton.addEventListener('click', function () {
-                autocomplete.setComponentRestrictions({
-                    'country': countries
-                });
-            });
-        }
-
-        setupClickListener('changecountry-usa', 'us');
-        setupClickListener(
-            'changecountry-usa-and-uot', ['us', 'pr', 'vi', 'gu', 'mp']);
-    */
-
 };
