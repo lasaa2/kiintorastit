@@ -1,51 +1,57 @@
+
+// luodaan objekti map - kartan näyttöä varten
 var map;
+// luodaan objekti indowindow - ikonista saatavaa infonäyttöä varten
 var infowindow;
+// luodaan objekti centerLatLng jossa määritellään kartan aloitus kp
 var centerLatLng = {
     lat: 64.250533,
     lng: 26.476404
 };
+// luodaan zoomTaso objekti jolla määritellään kartan zoomitaso
 var zoomTaso = 5; // Kartan zoomitaso
+// luodaan markerImage objekti jossa määritellään kartalla näkyvien ikonien kuvakkeen osoite
 var markerImage = 'img/rastilippu.png'; // Marker image
-
-
-
 
 
 /* Funktio joka muodostaa kartan */
 
+// funktio initMap luo uuden kartta objektin annettujen parametrien mukaan
+
 function initMap() {
 
+    // muuttuja mapCanvas sisältää tiedon siitä mihin kartta muodostetaan html sivulla
+    // tässä tapauksessa id map sisältävän elementtiin
     var mapCanvas = document.getElementById("map"); //$("#map")[0];
 
+
+    // muuttuja mapProperties määrittelee karttaobjektin konstruktorille annettavie asetuksia
     var mapProperties = {
-        center: new google.maps.LatLng(centerLatLng),
-        zoom: zoomTaso,
-        disableDefaultUI: true,
-        mapTypeId: 'terrain',
-        mapTypeControl: false,
-        mapTypeControlOptions: {
+        center: new google.maps.LatLng(centerLatLng), // keskipisteen määrittely
+        zoom: zoomTaso, // zoomi tason määrittely
+        disableDefaultUI: true, // poistetaan normaalit kartta kontrollit käytöstä
+        mapTypeId: 'terrain', // kartan tyyppi määritellään terrain kartaksi
+        mapTypeControl: false, // kartan tyyppiä ei voi vaihtaa tämän asetuksen johdosta
+        mapTypeControlOptions: { // optioita tyypin määrittelyyn
             style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
             position: google.maps.ControlPosition.TOP_LEFT_CENTER
         },
-        zoomControl: true,
-        zoomControlOptions: {
+        zoomControl: true, // sallitaan zoomaustason kontrollin näkyminen
+        zoomControlOptions: { // määritellään missä napit sijaitsee ja minkälaisia
             position: google.maps.ControlPosition.RIGHT_CENTER,
             style: google.maps.ZoomControlStyle.LARGE,
         },
-        scaleControl: true,
-        streetViewControl: false,
-        streetViewControlOptions: {
+        scaleControl: true, // sallitaan skaalaus napit
+        streetViewControl: false, // ei sallita streetview näkymää
+        streetViewControlOptions: { // turha optio
             position: google.maps.ControlPosition.LEFT_TOP
         },
-        fullscreenControl: false,
+        fullscreenControl: false, // ei sallita koko ruudun kartta painiketta
     };
 
+    map = new google.maps.Map(mapCanvas, mapProperties); // luodaan uusi kartta-objekti ja annetaan parametreiksi asetus objekteja
 
-    map = new google.maps.Map(mapCanvas, mapProperties);
-
-    map = new google.maps.Map($("#map")[0], mapProperties);
-
-    var card = document.getElementById('pac-card');
+    var card = document.getElementById('pac-card'); 
     var input = document.getElementById('searchBox');
     // var countries = document.getElementById('country-selector');
 
